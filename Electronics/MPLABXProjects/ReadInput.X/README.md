@@ -2,6 +2,6 @@
 
 PORTB are inputs;
 
-PORTD are outputs;
+PORTC are outputs;
 
-Inputs on PORTB will equal to outputs on PORTD.
+Inputs on PORTB will equal to outputs on PORTC.

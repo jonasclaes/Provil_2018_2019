@@ -19,11 +19,11 @@ void main(void) {
     ANSEL = 0x00;
     ANSELH = 0x00;
     
-    TRISD = 0x00;               // PORTD = OUTPUT
+    TRISC = 0x00;               // PORTC = OUTPUT
     TRISB = 0xFF;               // PORTB = INPUT
     
     while (1) {
         Switches_B = PORTB;     // Lees de waarde van poort B in in variabele Switches_B
-        PORTD = Switches_B;     // Lees de waarde van variabele Switches_B in in poort D
+        PORTC = Switches_B;     // Lees de waarde van variabele Switches_B in in poort C
     }
 }
