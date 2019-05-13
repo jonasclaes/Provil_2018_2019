@@ -16,24 +16,30 @@ void main(void) {
     char switches;
     char count;
     
-    TRISB = 0xFF;
+    TRISC = 0xFF;
     TRISD = 0x00;
     
+    PORTD = 0x00;
+    
+    start:
+    
     while (1) {
-        switches = PORTB;
+        switches = PORTC;
         
         if (switches) {
             count = 0;
             
             while (1) {
+                switches = PORTC;
+                
                 if (!switches) {
-                    break;
+                    goto start;
                 }
                 
                 count++;
                 PORTD = count;
 
-                __delay_ms(100);
+                __delay_ms(20);
             }
         }
     }
